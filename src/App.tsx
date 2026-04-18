@@ -1,35 +1,127 @@
 export default function App() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 py-16 sm:px-8 lg:px-12">
-        <div className="max-w-3xl">
-          <div className="mb-6 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-white/65">
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "#0a0a0a",
+        color: "#ffffff",
+        fontFamily:
+          'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      }}
+    >
+      <section
+        style={{
+          width: "100%",
+          maxWidth: "1280px",
+          minHeight: "100vh",
+          margin: "0 auto",
+          padding: "64px 24px",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ maxWidth: "840px" }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "10px 16px",
+              borderRadius: "999px",
+              border: "1px solid rgba(255,255,255,0.12)",
+              background: "rgba(255,255,255,0.04)",
+              fontSize: "11px",
+              fontWeight: 500,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.68)",
+              marginBottom: "24px",
+            }}
+          >
             Loc7 Rebuild
           </div>
 
-          <h1 className="text-4xl font-semibold leading-[0.98] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+          <h1
+            style={{
+              margin: 0,
+              fontSize: "clamp(42px, 7vw, 78px)",
+              lineHeight: 0.96,
+              letterSpacing: "-0.05em",
+              fontWeight: 600,
+              color: "#ffffff",
+            }}
+          >
             Estrutura limpa para reconstruir a Loc7 com controle total.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
+          <p
+            style={{
+              marginTop: "28px",
+              marginBottom: 0,
+              maxWidth: "760px",
+              fontSize: "clamp(18px, 2vw, 22px)",
+              lineHeight: 1.7,
+              color: "rgba(255,255,255,0.72)",
+            }}
+          >
             Novo ambiente criado para evoluir o projeto com arquitetura mais
             sólida, decisões mais seguras e zero dependência da bagunça
             acumulada no código anterior.
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <div className="inline-flex min-h-[50px] items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black">
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "12px",
+              marginTop: "36px",
+            }}
+          >
+            <div
+              style={{
+                minHeight: "50px",
+                padding: "0 22px",
+                borderRadius: "999px",
+                background: "#ffffff",
+                color: "#000000",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "14px",
+                fontWeight: 600,
+              }}
+            >
               Base ativa
             </div>
 
-            <div className="inline-flex min-h-[50px] items-center justify-center rounded-full border border-white/12 px-6 text-sm font-semibold text-white/75">
+            <div
+              style={{
+                minHeight: "50px",
+                padding: "0 22px",
+                borderRadius: "999px",
+                border: "1px solid rgba(255,255,255,0.14)",
+                color: "rgba(255,255,255,0.76)",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "14px",
+                fontWeight: 600,
+              }}
+            >
               Próximo passo: layout global
             </div>
           </div>
 
-          <p className="mt-6 text-sm leading-6 text-white/45">
-            Rebuild separado do projeto em produção, com deploy limpo, versionamento
-            previsível e espaço seguro para evolução.
+          <p
+            style={{
+              marginTop: "24px",
+              marginBottom: 0,
+              fontSize: "14px",
+              lineHeight: 1.7,
+              color: "rgba(255,255,255,0.45)",
+            }}
+          >
+            Rebuild separado do projeto em produção, com deploy limpo,
+            versionamento previsível e espaço seguro para evolução.
           </p>
         </div>
       </section>
