@@ -1,62 +1,63 @@
-import { Switch, Route } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import Navbar from "./Navbar";
 
-// ===== PÁGINAS BASE =====
-
+// PÁGINAS (temporárias)
 function Home() {
   return (
-    <div style={{ minHeight: "100vh", background: "#000", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <h1>HOME</h1>
+    <div className="flex items-center justify-center h-screen text-white text-2xl">
+      HOME
     </div>
   );
 }
 
 function Catalogo() {
   return (
-    <div style={{ minHeight: "100vh", background: "#000", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <h1>CATÁLOGO</h1>
+    <div className="flex items-center justify-center h-screen text-white text-2xl">
+      CATÁLOGO
     </div>
   );
 }
 
 function Produto() {
   return (
-    <div style={{ minHeight: "100vh", background: "#000", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <h1>PRODUTO</h1>
+    <div className="flex items-center justify-center h-screen text-white text-2xl">
+      PRODUTO
     </div>
   );
 }
 
-function AdminPanel() {
+function Orcamento() {
   return (
-    <div style={{ minHeight: "100vh", background: "#fff", color: "#000", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <h1>ADMIN PANEL</h1>
+    <div className="flex items-center justify-center h-screen text-white text-2xl">
+      ORÇAMENTO
     </div>
   );
 }
 
-function NotFound() {
+function Admin() {
   return (
-    <div style={{ minHeight: "100vh", background: "#000", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <h1>404</h1>
+    <div className="flex items-center justify-center h-screen text-black text-2xl bg-white">
+      ADMIN PANEL
     </div>
   );
 }
-
-// ===== APP =====
 
 export default function App() {
+  const [location] = useLocation();
+
+  const isAdmin = location.startsWith("/admin-panel");
+
   return (
-    <Switch>
-      {/* SITE */}
-      <Route path="/" component={Home} />
-      <Route path="/equipamentos/:category" component={Catalogo} />
-      <Route path="/produto/:slug" component={Produto} />
+    <div className="bg-black min-h-screen">
+      {!isAdmin && <Navbar />}
 
-      {/* ADMIN */}
-      <Route path="/admin-panel" component={AdminPanel} />
-
-      {/* FALLBACK */}
-      <Route component={NotFound} />
-    </Switch>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/equipamentos/:category" component={Catalogo} />
+        <Route path="/produto/:slug" component={Produto} />
+        <Route path="/orcamento" component={Orcamento} />
+        <Route path="/admin-panel" component={Admin} />
+      </Switch>
+    </div>
   );
 }
