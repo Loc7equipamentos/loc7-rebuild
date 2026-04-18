@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 // PÁGINAS (temporárias)
 function Home() {
   return (
-    <div className="flex items-center justify-center h-screen text-white text-2xl">
+    <div className="flex items-center justify-center min-h-screen pt-20 text-white text-2xl">
       HOME
     </div>
   );
@@ -12,7 +12,7 @@ function Home() {
 
 function Catalogo() {
   return (
-    <div className="flex items-center justify-center h-screen text-white text-2xl">
+    <div className="flex items-center justify-center min-h-screen pt-20 text-white text-2xl">
       CATÁLOGO
     </div>
   );
@@ -20,7 +20,7 @@ function Catalogo() {
 
 function Produto() {
   return (
-    <div className="flex items-center justify-center h-screen text-white text-2xl">
+    <div className="flex items-center justify-center min-h-screen pt-20 text-white text-2xl">
       PRODUTO
     </div>
   );
@@ -28,7 +28,7 @@ function Produto() {
 
 function Orcamento() {
   return (
-    <div className="flex items-center justify-center h-screen text-white text-2xl">
+    <div className="flex items-center justify-center min-h-screen pt-20 text-white text-2xl">
       ORÇAMENTO
     </div>
   );
@@ -36,7 +36,7 @@ function Orcamento() {
 
 function Admin() {
   return (
-    <div className="flex items-center justify-center h-screen text-black text-2xl bg-white">
+    <div className="flex items-center justify-center min-h-screen text-black text-2xl bg-white">
       ADMIN PANEL
     </div>
   );
@@ -48,7 +48,7 @@ export default function App() {
   const isAdmin = location.startsWith("/admin-panel");
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black min-h-screen text-white">
       {!isAdmin && <Navbar />}
 
       <Switch>
