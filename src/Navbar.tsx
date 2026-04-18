@@ -1,48 +1,19 @@
-import { Link, useLocation } from "wouter";
-
 export default function Navbar() {
-  const [location] = useLocation();
-
-  const isActive = (path: string) => location === path;
-
   return (
-    <header className="bg-black border-b border-neutral-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="fixed top-0 left-0 w-full z-50 bg-black border-b border-gray-800">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 text-white">
+        
+        <div className="font-bold text-lg tracking-wide">
+          LOC7
+        </div>
 
-        {/* LOGO */}
-        <Link href="/">
-          <span className="text-white text-xl font-semibold tracking-wide cursor-pointer">
-            LOC7
-          </span>
-        </Link>
+        <div className="flex gap-6 text-sm">
+          <a href="/" className="hover:opacity-70">Home</a>
+          <a href="/equipamentos/audio" className="hover:opacity-70">Catálogo</a>
+          <a href="/orcamento" className="hover:opacity-70">Orçamento</a>
+        </div>
 
-        {/* MENU */}
-        <nav className="flex items-center gap-8 text-sm">
-
-          <Link href="/">
-            <span className={`cursor-pointer transition ${
-              isActive("/") ? "text-white" : "text-neutral-400 hover:text-white"
-            }`}>
-              Home
-            </span>
-          </Link>
-
-          <Link href="/equipamentos/audio">
-            <span className={`cursor-pointer transition ${
-              location.startsWith("/equipamentos") ? "text-white" : "text-neutral-400 hover:text-white"
-            }`}>
-              Equipamentos
-            </span>
-          </Link>
-
-          <Link href="/orcamento">
-            <span className="text-neutral-400 hover:text-white cursor-pointer transition">
-              Orçamento
-            </span>
-          </Link>
-
-        </nav>
       </div>
-    </header>
+    </div>
   );
 }
