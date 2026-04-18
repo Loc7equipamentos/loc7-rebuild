@@ -1,15 +1,23 @@
 export default function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white text-black">
-      <div className="text-center">
-        <h1 className="text-3xl font-semibold">
-          LOC7 REBUILD
+    <div style={{
+      minHeight: "100vh",
+      background: "#0a0a0a",
+      color: "#fff",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontFamily: "sans-serif",
+      textAlign: "center"
+    }}>
+      <div>
+        <h1 style={{ fontSize: "48px", marginBottom: "16px" }}>
+          LOC7
         </h1>
-
-        <p className="mt-4 text-sm text-gray-600">
-          Estrutura limpa iniciada com sucesso
+        <p style={{ opacity: 0.6 }}>
+          Estrutura base pronta para construção
         </p>
       </div>
-    </main>
+    </div>
   );
 }
